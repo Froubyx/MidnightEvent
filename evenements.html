@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - Midnight Event's</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="../img/logo.png" alt="Midnight Event's Logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="presentation.html">Présentation</a></li>
+                    <li><a href="evenements.html" class="active">Événements</a></li>
+                    <li><a href="calendrier.html">Calendrier</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-content">
+                <h1>NOS ÉVÉNEMENTS</h1>
+                <p class="tagline">Une Collection d'expériences inoubliables.</p>
+                <p style="max-width: 700px; margin: 1rem auto 0; color: var(--gray-text);">
+                    Découvrez tous les événements spectaculaires que nous avons organisés.<br>Chaque événement raconte une histoire unique.
+                </p>
+            </div>
+        </section>
+
+        <!-- FILTRES POUR TRIER LES EVENTS -->
+        <section style="background: var(--darker-bg); padding: 2rem 0;">
+            <div class="container">
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;" onclick="filterEvents('all')">Tous</button>
+                    <button class="btn btn-secondary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;" onclick="filterEvents('course')">Courses</button>
+                    <button class="btn btn-secondary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;" onclick="filterEvents('jeu')">Jeux</button>
+                    <button class="btn btn-secondary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;" onclick="filterEvents('competition')">Compétitions</button>
+                    <button class="btn btn-secondary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;" onclick="filterEvents('autre')">Autre</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="event-grid" id="eventGallery">
+                    <!-- <div class="event-card" data-category="course" onclick="window.location.href='events/evox-rush.html?from=events'">
+                        <img src="img/evox-rush/LOGO-IMAGE-EVENT.png" alt="Logo EvoX Rush" class="event-image">
+                        <div class="event-info">
+                            <h3>EvoX Rush</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 10 Janvier 2026</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Un rallye d'exeption, mélangeant asphalte, terre & passages dangereux.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Sud Costa-Del-Mar</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 26 participants</span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/evox-rush.html?from=events'">
+                        <img src="img/evox-rush/LOGO-IMAGE-EVENT.png" alt="Logo EvoX Rush" class="event-image">
+                        <div class="event-info">
+                            <h3>EvoX Rush</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 10 Janvier 2026</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Un rallye d'exeption, mélangeant asphalte, terre & passages dangereux.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Sud Costa-Del-Mar</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 26 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="jeu" onclick="window.location.href='events/m&b2g-2.html?from=events'">
+                        <img src="img/m&b2g-2/LOGO-IMAGE-EVENT.png" alt="M&B2G #2" class="event-image">
+                        <div class="event-info">
+                            <h3>Mystère & Boule 2 Gomme #2</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 20 Décembre 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Une enquète remplie de mini-jeux. Quelle équipe sera la première à retrouver ce qui est arrivé à la Mère Noël ?
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Théatre d'Union</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 11 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/gumball-3000-2025.html?from=events'">
+                        <img src="img/gumball-3k-2025/LOGO-IMAGE-EVENT.png" alt="GUMBALL 3000 2025" class="event-image">
+                        <div class="event-info">
+                            <h3>GUMBALL 3000 Edition 2025</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 20 Septembre 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                L'événement le plus connus de l'île, le plus grand et le plus cher jamais organisé. Il aura réunit pas moins de 40 personnes, et beaucoup d'argent !
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Watergate</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 32 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/forest-rush-3008.html?from=events'">
+                        <img src="img/forest-rush/LOGO_FOREST_RUSH.png" alt="FOREST RUSH" class="event-image">
+                        <div class="event-info">
+                            <h3>Forest Rush 3008</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 28 Juin 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Un rallye completement dingue, avec les mythiques Peugeot 3008 Maxi-Dakar.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Forêt Verdansk</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 21 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/drag-race-jamestown.html?from=events'">
+                        <img src="img/drag-race-jamestown/LOGO_DRAG_RACE_JAMESTOWN.png" alt="DRAG RACE JAMESTOWN" class="event-image">
+                        <div class="event-info">
+                            <h3>DRAG RACE Jamestown</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 07 Fevrier 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Première course de drag sur Vice-City, rassemblement automobile exceptionnel, des véhicules exlusifs, et bien plus !
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Aéroport Jamestown</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 26 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/rallye-bois.html?from=events'">
+                        <img src="img/rallye-des-bois/LOGO_RALLYE_DES_BOIS.png" alt="RALLYE DES BOIS" class="event-image">
+                        <div class="event-info">
+                            <h3>Rallye des Bois</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 04 Janvier 2025</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Premier rallye sur Vice-City, et premier rallye à être fait dans 4 véhicules uniques.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Rond-point Watkins Glen</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 17 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="jeu" onclick="window.location.href='events/m&b2g-1.html?from=events'">
+                        <img src="img/m&b2g-1/LOGO_M&B2G-1.png" alt="M&B2G #1" class="event-image">
+                        <div class="event-info">
+                            <h3>Mystère & Boule 2 Gomme #1</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 10 Aout 2024</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Une enquète infernale, avec beaucoup de témois et fausses pistes. Qui sera le premier à retrouver Marius ?
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Parc de jeu d'Union</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 17 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/rallye-riviere.html?from=events'">
+                        <img src="img/rallye-riviere/LOGO_RALLYE_RIVIERE.png" alt="RALLYE RIVIERE" class="event-image">
+                        <div class="event-info">
+                            <h3>Rallye de la Rivière</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 11 Fevrier 2024</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Le dernier rallye de Malden, il signe la fin d'une époque, et la fin de pistes légendaires.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> La Rivière</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 42 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/drag-race-malden.html?from=events'">
+                        <img src="img/drag-race-malden/LOGO_DRAG_MALDEN.png" alt="DRAG RACE" class="event-image">
+                        <div class="event-info">
+                            <h3>DRAG RACE Aéroport</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 05 Aout 2023</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Une course de rag sur l'aéroport de Malden, avec les bolides les plus prestigieux sur l'île.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Aéroport de Malden</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 23 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/rallye-trinite.html?from=events'">
+                        <img src="img/rallye-trinite/LOGO_RALLYE_TRINITE.png" alt="RALLYE TRINITE" class="event-image">
+                        <div class="event-info">
+                            <h3>Rallye de la Trinité</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 15 Avril 2023</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Le premier rallye qui a demendé une grosse organisation, avec une route à circulation alternée, et la plus grosse tombola organisé par notre équipe.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> La Trinité</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 17 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/course-mont-chauve.html?from=events'">
+                        <img src="img/course-mont-chauve/LOGO_MONT_CHAUVE.png" alt="COURSE COTE CHAUVE" class="event-image">
+                        <div class="event-info">
+                            <h3>Course de côte du mont chauve</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 04 Fevrier 2023</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Une course de côte emplie de rebondissements et d'imprévus.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Route du Mont Chauve</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 33 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-category="course" onclick="window.location.href='events/rallye-goisse.html?from=events'">
+                        <img src="img/rallye-goisse/LOGO_RALLYE_GOISSE.png" alt="RALLYE DE GOISSE" class="event-image">
+                        <div class="event-info">
+                            <h3>Rallye de Goisse</h3>
+                            <p class="event-date"><img src="img/date2.svg" class="picto" alt="picto date"> 04 Decembre 2022</p>
+                            <p style="color: var(--gray-text); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Le premier rallye organisé par notre équipe. C'est aussi un des premiers rallye organisé sur Malden.
+                            </p>
+                            <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--gray-text);">
+                                <span><img src="img/localisation2.svg" class="picto" alt="picto localisation"> Goisse</span>
+                                <span><img src="img/people2.svg" class="picto" alt="picto people"> 15 participants</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE SI IL Y A PAS D'EVENT -->
+                <div id="noEvents" style="display: none; text-align: center; padding: 4rem 0;">
+                    <h3 style="color: var(--gray-text);">Aucun événement trouvé dans cette catégorie</h3>
+                    <button class="btn" style="margin-top: 1rem;" onclick="filterEvents('all')">Voir tous les événements</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--darker-bg);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>EN CHIFFRES</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; margin-top: 3rem;">
+                    <div>
+                        <div style="font-size: 3.5rem; font-weight: 700; color: var(--primary-red); font-family: 'Bebas Neue', sans-serif;">15</div>
+                        <div style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;">Événements Réalisés</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3.5rem; font-weight: 700; color: var(--primary-red); font-family: 'Bebas Neue', sans-serif;">265</div>
+                        <div style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;">Participants Total</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3.5rem; font-weight: 700; color: var(--primary-red); font-family: 'Bebas Neue', sans-serif;">93%</div>
+                        <div style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;">Taux de Satisfaction</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3.5rem; font-weight: 700; color: var(--primary-red); font-family: 'Bebas Neue', sans-serif;">3.5 ans</div>
+                        <div style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 1px;">D'Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 1rem;">DÉCOUVREZ NOS PROCHAINS ÉVÉNEMENTS</h2>
+                <p style="color: var(--gray-text); font-size: 1.2rem; margin-bottom: 2rem;">
+                    Ne manquez pas les prochaines expériences inoubliables que nous préparons
+                </p>
+                <a href="calendrier.html" class="btn" style="font-size: 1.1rem; padding: 1.2rem 3rem;">Voir le Calendrier</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>MIDNIGHT EVENT'S</h3>
+                <p>© 2026 Midnight Event's. Entreprise ARMA FOR LIFE.</p>
+                <p style="margin-top: 0.5rem;">L'excellence de l'événementiel sur Vice City</p>
+            </div>
+            <div>
+                <p style="color: var(--gray-text); font-size: 0.9rem;">
+                    <img src="img/localisation2.svg" class="picto" alt="picto localisation"> Villa Midnight Event's, [057942] Perrytonia, Vice-City<br>
+                    <img src="img/email2.svg" class="picto" alt="picto email"> dylan.frouby37@a4l.fr<br>
+                    <img src="img/phone2.svg" class="picto" alt="picto phone"> 06.56.28.60.28 | FROUBY DYLAN - PDG
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fonction de filtrage des événements
+        function filterEvents(category) {
+            const eventCards = document.querySelectorAll('.event-card');
+            const noEventsMsg = document.getElementById('noEvents');
+            const buttons = document.querySelectorAll('button[onclick^="filterEvents"]');
+            let visibleCount = 0;
+
+            // Mettre à jour les styles des boutons
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent === 'Tous')) {
+                    btn.className = 'btn';
+                } else {
+                    btn.className = 'btn btn-secondary';
+                }
+            });
+
+            // Filtrer les cartes
+            eventCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Afficher/masquer le message "aucun événement"
+            noEventsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.event-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

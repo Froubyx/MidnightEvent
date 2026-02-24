@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier - Midnight Event's</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="../img/logo.png" alt="Midnight Event's Logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="presentation.html">Présentation</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="calendrier.html" class="active">Calendrier</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-content">
+                <h1>CALENDRIER</h1>
+                <p class="tagline">Les Prochains Evénements à ne pas manquer.</p>
+                <p style="max-width: 700px; margin: 1rem auto 0; color: var(--gray-text);">
+                    Découvrez tous nos événements à venir et réservez votre place dès maintenant pour vivre des expériences inoubliables.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-red);">MARS 2026</h2>
+                    <p style="color: var(--gray-text); margin-top: 0.5rem;">Les événements du mois de MARS.</p>
+                </div>
+
+                <div class="calendar-list">
+                    <div class="calendar-item" onclick="window.location.href='events/turb-attack.html?from=calendar'">
+                        <div class="calendar-date">
+                            <div class="day">21</div>
+                            <div class="month">SAM</div>
+                        </div>
+                        <div class="calendar-info">
+                            <h3>Turb' Attack</h3>
+                            <p class="calendar-location"><img src="img/localisation2.svg" class="picto" alt="picto localisation"> | Victoria</p>
+                            <p style="color: var(--gray-text); margin-top: 0.5rem; font-size: 0.9rem;">
+                                Course contre la montre à bord de bolides mythiques en rallye : Les Renault R5 Turbo ! Inscription limitée à 30 pilotes.
+                            </p>
+                            <div style="margin-top: 0.8rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: rgba(180, 0, 0, 0.2); padding: 0.3rem 0.8rem; font-size: 0.85rem; border-radius: 3px;"><img src="img/mark.svg" class="picto" alt="picto mark"> Course</span>
+                                <span style="color: var(--gray-text); font-size: 0.85rem;"><img src="img/chrono2.svg" class="picto" alt="picto chono"> 21:00 - 02:00</span>
+                            </div>
+                        </div>
+                        <div class="btn btn-secondary">Voir Détails</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POUR UN SEUL MOIS -->
+        <!-- <section class="section" style="background: var(--darker-bg);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-red);">MARS 2026</h2>
+                    <p style="color: var(--gray-text); margin-top: 0.5rem;">Les événements du mois prochain</p>
+                </div>
+
+                <div class="calendar-list">
+                    <div class="calendar-item" onclick="window.location.href='events/turb-attack.html?from=calendar'">
+                        <div class="calendar-date">
+                            <div class="day">14</div>
+                            <div class="month">SAM</div>
+                        </div>
+                        <div class="calendar-info">
+                            <h3>Turb' Attack</h3>
+                            <p class="calendar-location"><img src="img/localisation2.svg" class="picto" alt="picto localisation"> | Victoria</p>
+                            <p style="color: var(--gray-text); margin-top: 0.5rem; font-size: 0.9rem;">
+                                Course contre la montre à bord de bolides mythiques en rallye : Les Renault R5 Turbo ! Inscription limitée à 30 pilotes.
+                            </p>
+                            <div style="margin-top: 0.8rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: rgba(180, 0, 0, 0.2); padding: 0.3rem 0.8rem; font-size: 0.85rem; border-radius: 3px;"><img src="img/mark.svg" class="picto" alt="picto mark"> Course</span>
+                                <span style="color: var(--gray-text); font-size: 0.85rem;"><img src="img/chrono2.svg" class="picto" alt="picto chono"> 21:00 - 02:00</span>
+                            </div>
+                        </div>
+                        <div class="btn btn-secondary">Voir Détails</div>
+                    </div>
+
+                    <div class="calendar-item" onclick="window.location.href='events/turb-attack.html?from=calendar'">
+                        <div class="calendar-date">
+                            <div class="day">14</div>
+                            <div class="month">SAM</div>
+                        </div>
+                        <div class="calendar-info">
+                            <h3>Turb' Attack</h3>
+                            <p class="calendar-location"><img src="img/localisation2.svg" class="picto" alt="picto localisation"> | Victoria</p>
+                            <p style="color: var(--gray-text); margin-top: 0.5rem; font-size: 0.9rem;">
+                                Course contre la montre à bord de bolides mythiques en rallye : Les Renault R5 Turbo ! Inscription limitée à 30 pilotes.
+                            </p>
+                            <div style="margin-top: 0.8rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: rgba(180, 0, 0, 0.2); padding: 0.3rem 0.8rem; font-size: 0.85rem; border-radius: 3px;"><img src="img/mark.svg" class="picto" alt="picto mark"> Course</span>
+                                <span style="color: var(--gray-text); font-size: 0.85rem;"><img src="img/chrono2.svg" class="picto" alt="picto chono"> 21:00 - 02:00</span>
+                            </div>
+                        </div>
+                        <div class="btn btn-secondary">Voir Détails</div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="section" style="background: var(--darker-bg);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-red);">PROCHAINEMENT</h2>
+                    <p style="color: var(--gray-text); margin-top: 0.5rem;">À venir dans l'année</p>
+                </div>
+
+                <div class="calendar-list">
+                    <div class="calendar-item" onclick="window.location.href='events/event-template.html?from=calendar'">
+                        <div class="calendar-date">
+                            <div class="day">A</div>
+                            <div class="month">DEFINIR</div>
+                        </div>
+                        <div class="calendar-info">
+                            <h3>Mind Game</h3>
+                            <p class="calendar-location"><img src="img/localisation2.svg" class="picto" alt="picto localisation"> LIEU A DEFINIR</p>
+                            <p style="color: var(--gray-text); margin-top: 0.5rem; font-size: 0.9rem;">
+                                Une compétition pour trouver qui arrivera a réfléchir le plus vite et répondre aux questions du jury.
+                            </p>
+                            <div style="margin-top: 0.8rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: rgba(180, 0, 0, 0.2); padding: 0.3rem 0.8rem; font-size: 0.85rem; border-radius: 3px;"><img src="img/mark.svg" class="picto" alt="picto mark"> Jeu</span>
+                                <span style="color: var(--gray-text); font-size: 0.85rem;"><img src="img/chrono2.svg" class="picto" alt="picto chono"> 21:00 - 23:30</span>
+                            </div>
+                        </div>
+                        <!-- <div class="btn btn-secondary">Voir Détails</div> -->
+                    </div>
+
+                    <div class="calendar-item" onclick="window.location.href='events/event-template.html?from=calendar'">
+                        <div class="calendar-date">
+                            <div class="day">A</div>
+                            <div class="month">DEFINIR</div>
+                        </div>
+                        <div class="calendar-info">
+                            <h3>un événement secret</h3>
+                            <p class="calendar-location"><img src="img/localisation2.svg" class="picto" alt="picto localisation"> LIEU A DEFINIR</p>
+                            <p style="color: var(--gray-text); margin-top: 0.5rem; font-size: 0.9rem;">
+                                Un événement où votre talent et votre esprit d'équipe parlera plus que votre parole.
+                            </p>
+                            <div style="margin-top: 0.8rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: rgba(180, 0, 0, 0.2); padding: 0.3rem 0.8rem; font-size: 0.85rem; border-radius: 3px;"><img src="img/mark.svg" class="picto" alt="picto mark"> Course</span>
+                                <span style="color: var(--gray-text); font-size: 0.85rem;"><img src="img/chrono2.svg" class="picto" alt="picto chono"> HORAIRE A DEFINIR</span>
+                            </div>
+                        </div>
+                        <!-- <div class="btn btn-secondary">Voir Détails</div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="section" style="background: linear-gradient(135deg, rgba(180, 0, 0, 0.1), rgba(10, 10, 10, 0.9)); padding: 4rem 0;">
+            <div class="container">
+                <div class="grid-2" style="align-items: center;">
+                    <div>
+                        <h2>COMMENT PARTICIPER ?</h2>
+                        <p style="color: var(--gray-text); line-height: 1.8; margin-top: 1rem;">
+                            Pour participer à nos événements, cliquez sur "Voir Détails" pour obtenir toutes les informations nécessaires : inscriptions, tarifs, règlement et plus encore.
+                        </p>
+                        <p style="color: var(--gray-text); line-height: 1.8; margin-top: 1rem;">
+                            Les places sont souvent limitées, alors ne tardez pas à vous inscrire ! Pour toute question, n'hésitez pas à nous contacter.
+                        </p>
+                        <a href="contact.html" class="btn" style="margin-top: 2rem; display: inline-block;">Nous Contacter</a>
+                    </div>
+                    <div class="card" style="padding: 2.5rem;">
+                        <h3 style="color: var(--primary-red); margin-bottom: 1.5rem;"><img src="img/punaise2.svg" class="picto" alt="picto"> Informations Importantes</h3>
+                        <ul style="list-style: none; color: var(--gray-text); line-height: 2;">
+                            <li>✓ Les inscriptions se font souvent en ligne</li>
+                            <li>✓ Places limitées pour chaque événement</li>
+                            <li>✓ Règlement à consulter avant inscription</li>
+                            <li>✓ Remboursement possible sous conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="text-align: center;">
+                <h2 style="margin-bottom: 1rem;">NE MANQUEZ AUCUN ÉVÉNEMENT</h2>
+                <p style="color: var(--gray-text); max-width: 600px; margin: 0 auto 2rem;">
+                    Restez informé de tous nos prochains événements, des inscriptions et des actualités exclusives.
+                </p>
+                <div style="max-width: 500px; margin: 0 auto; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a href="contact.html" class="btn">Nous Suivre</a>
+                    <a href="evenements.html" class="btn btn-secondary">Événements Passés</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>MIDNIGHT EVENT'S</h3>
+                <p>© 2026 Midnight Event's. Entreprise ARMA FOR LIFE.</p>
+                <p style="margin-top: 0.5rem;">L'excellence de l'événementiel sur Vice City</p>
+            </div>
+            <div>
+                <p style="color: var(--gray-text); font-size: 0.9rem;">
+                    <img src="img/localisation2.svg" class="picto" alt="picto localisation"> Villa Midnight Event's, [057942] Perrytonia, Vice-City<br>
+                    <img src="img/email2.svg" class="picto" alt="picto email"> dylan.frouby37@a4l.fr<br>
+                    <img src="img/phone2.svg" class="picto" alt="picto phone"> 06.56.28.60.28 | FROUBY DYLAN - PDG
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.calendar-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(-30px)';
+            el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(el);
+        });
+
+        // Highlight des événements imminents
+        const today = new Date();
+        document.querySelectorAll('.calendar-item').forEach(item => {
+            const dateDiv = item.querySelector('.calendar-date');
+            if (dateDiv) {
+                // Vous pouvez ajouter une logique pour mettre en évidence les événements très proches
+                // Pour l'instant, simple effet hover amélioré
+                item.addEventListener('mouseenter', function() {
+                    this.style.borderLeft = '6px solid var(--primary-red)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.borderLeft = '4px solid var(--primary-red)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
