@@ -801,6 +801,144 @@ main {
     }
 }
 
+/* Bandeau Recrutement */
+.recruitment-banner {
+    position: fixed;
+    top: 92px; /* Juste en dessous du header (hauteur header ≈ 92px) */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary-red) 0%, #8b0000 100%);
+    color: white;
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Juste en dessous du header qui est à 1000 */
+    box-shadow: 0 2px 10px rgba(180, 0, 0, 0.5);
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.recruitment-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recruitment-icon {
+    font-size: 1.3rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.recruitment-text {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.recruitment-text strong {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.recruitment-btn {
+    background: white;
+    color: var(--primary-red);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.recruitment-btn:hover {
+    background: var(--accent-gold);
+    color: var(--dark-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.recruitment-close {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    padding: 0.2rem 0.5rem;
+}
+
+.recruitment-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.recruitment-banner.hidden {
+    display: none;
+}
+
+/* Ajuster le main quand le bandeau est visible */
+body:not(.banner-closed) main {
+    margin-top: 145px; /* Header (100px) + Bandeau (~45px) */
+}
+
+body.banner-closed main {
+    margin-top: 100px; /* Juste le header */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recruitment-banner {
+        top: 78px; /* Header mobile est plus petit */
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .recruitment-content {
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .recruitment-text {
+        font-size: 0.85rem;
+    }
+    
+    .recruitment-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .recruitment-close {
+        font-size: 1.2rem;
+        right: 0.5rem;
+    }
+    
+    body:not(.banner-closed) main {
+        margin-top: 130px;
+    }
+}
+
 /* PERSO */
 
 /* Lightbox */

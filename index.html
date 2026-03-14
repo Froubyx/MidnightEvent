@@ -34,6 +34,18 @@
         </div>
     </header>
 
+    <!-- Bandeau Recrutement -->
+    <div class="recruitment-banner">
+        <div class="recruitment-content">
+            <span class="recruitment-icon"><img class='picto'src="img/eclair.svg" alt="picto"></span>
+            <span class="recruitment-text">
+                <strong>Nous recrutons !</strong> Rejoignez l'équipe de Midnight Event's en <strong>Métier</strong> pour notre nouveau projet.
+            </span>
+            <a href="events/projet1-2026.html" class="recruitment-btn">En savoir plus →</a>
+        </div>
+        <button class="recruitment-close" id="closeBanner">✕</button>
+    </div>
+
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -232,6 +244,18 @@
                 navMenu.classList.remove('active');
             }
         });
+
+        // Gestion du bandeau de recrutement
+        const closeBannerBtn = document.getElementById('closeBanner');
+        const recruitmentBanner = document.querySelector('.recruitment-banner');
+
+        if (closeBannerBtn && recruitmentBanner) {
+            closeBannerBtn.addEventListener('click', function() {
+                recruitmentBanner.classList.add('hidden');
+                document.body.classList.add('banner-closed');
+            });
+        }
+
         // Smooth scroll pour les liens internes
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
