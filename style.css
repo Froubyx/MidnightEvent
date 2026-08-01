@@ -1070,3 +1070,112 @@ body.banner-closed main {
 html {
     scroll-behavior: smooth;
 }
+
+/* ==========================================
+   Encart Publicitaire / Sponsoring
+   ========================================== */
+.ad-section {
+    padding: 2.5rem 0;
+    background: var(--darker-bg);
+}
+
+.ad-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(180, 0, 0, 0.15) 0%, var(--card-bg) 60%, rgba(255, 215, 0, 0.05) 100%);
+    border: 1px solid rgba(180, 0, 0, 0.4);
+    border-left: 5px solid var(--primary-red);
+    padding: 2rem 2.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.ad-banner:hover {
+    border-color: var(--primary-red);
+    box-shadow: 0 10px 35px rgba(180, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Badge indicatif "Publicité" */
+.ad-badge {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--accent-gold);
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.ad-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.ad-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.ad-text h2 {
+    font-size: 2.2rem;
+    color: var(--light-text);
+    margin-bottom: 0.4rem;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 15px rgba(180, 0, 0, 0.3);
+}
+
+.ad-text p {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 750px;
+}
+
+.ad-action {
+    flex-shrink: 0;
+}
+
+/* Ajustement spécifique du bouton */
+.btn-ad {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    white-space: nowrap;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .ad-banner {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .ad-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+
+    .ad-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .ad-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .ad-action {
+        width: 100%;
+    }
+
+    .btn-ad {
+        width: 100%;
+        justify-content: center;
+    }
+}
