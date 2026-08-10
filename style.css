@@ -1074,12 +1074,12 @@ html {
 /* ==========================================
    Encart Publicitaire / Sponsoring
    ========================================== */
-.ad-section {
+.pbct-section {
     padding: 2.5rem 0;
     background: var(--darker-bg);
 }
 
-.ad-banner {
+.pbct-banner {
     position: relative;
     background: linear-gradient(135deg, rgba(180, 0, 0, 0.15) 0%, var(--card-bg) 60%, rgba(255, 215, 0, 0.05) 100%);
     border: 1px solid rgba(180, 0, 0, 0.4);
@@ -1089,14 +1089,14 @@ html {
     transition: all 0.3s ease;
 }
 
-.ad-banner:hover {
+.pbct-banner:hover {
     border-color: var(--primary-red);
     box-shadow: 0 10px 35px rgba(180, 0, 0, 0.25);
     transform: translateY(-2px);
 }
 
 /* Badge indicatif "Publicité" */
-.ad-badge {
+.pbct-badge {
     position: absolute;
     top: 0.8rem;
     right: 1.2rem;
@@ -1108,7 +1108,7 @@ html {
     text-transform: uppercase;
 }
 
-.ad-content {
+.pbct-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1116,12 +1116,12 @@ html {
     flex-wrap: wrap;
 }
 
-.ad-text {
+.pbct-text {
     flex: 1;
     min-width: 280px;
 }
 
-.ad-text h2 {
+.pbct-text h2 {
     font-size: 2.2rem;
     color: var(--light-text);
     margin-bottom: 0.4rem;
@@ -1129,19 +1129,19 @@ html {
     text-shadow: 0 0 15px rgba(180, 0, 0, 0.3);
 }
 
-.ad-text p {
+.pbct-text p {
     color: var(--gray-text);
     font-size: 0.95rem;
     line-height: 1.5;
     max-width: 750px;
 }
 
-.ad-action {
+.pbct-action {
     flex-shrink: 0;
 }
 
 /* Ajustement spécifique du bouton */
-.btn-ad {
+.btn-pbct {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -1150,31 +1150,31 @@ html {
 
 /* Responsive Mobile */
 @media (max-width: 768px) {
-    .ad-banner {
+    .pbct-banner {
         padding: 1.8rem 1.5rem;
     }
 
-    .ad-badge {
+    .pbct-badge {
         position: static;
         display: inline-block;
         margin-bottom: 0.5rem;
     }
 
-    .ad-content {
+    .pbct-content {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
     }
 
-    .ad-text h2 {
+    .pbct-text h2 {
         font-size: 1.8rem;
     }
 
-    .ad-action {
+    .pbct-action {
         width: 100%;
     }
 
-    .btn-ad {
+    .btn-pbct {
         width: 100%;
         justify-content: center;
     }
