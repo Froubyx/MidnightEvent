@@ -1177,15 +1177,7 @@ html {
     white-space: nowrap;
 }
 
-#pack-standard {
-    scroll-margin-top: 100px;
-}
-
-#pack-plus {
-    scroll-margin-top: 100px;
-}
-
-#pack-premium {
+#forfaits {
     scroll-margin-top: 100px;
 }
 
